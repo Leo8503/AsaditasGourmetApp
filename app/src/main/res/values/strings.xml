@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Asaditas Gourmet</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="google_maps_api_key">AIzaSyC7P098T3dNrvcJh6TsZmtiGg5sh09e5kQ</string>
+
+    <array name="page_indicators">
+        <item>Circle</item>
+        <item>Dash</item>
+        <item>Round Square</item>
+        <item>Square</item>
+        <item>Custom</item>
+    </array>
+
+
+    <string name="country_selection_prompt">Seleccionar pais</string>
+    <string-array name="CountryCodes">
+        <item>52,MX</item>
+    </string-array>
+
+
+    <string name="getStarted">Get Started</string>
+    <string name="descLogin">Ingresa tu número de teléfono y te enviaremos una notificacion para verificarte</string>
+    <string name="descMobile">Mobil No.</string>
+    <string name="mobileHint">Phone Number *</string>
+    <string name="loginBtnText">Send OTP</string>
+    <string name="ctnwithfb">Continue with Facebook</string>
+    <string name="ctnwithgoogle">Continue with Google</string>
+    <string name="ctnwithemail">Continue with Email</string>
+    <string name="termsandconditions">Al Continuar. usted acepta nuestros términos de Servicio, Política de privacidad y Política de contenido</string>
+    <string name="textOtpVer">OTP Verification</string>
+    <string name="userNum">Enter the OTP sent to</string>
+    <string name="moreYourself">Tell us a bit more about Yourself</string>
+    <string name="logOutText">Log Out</string>
+    <string name="trending">Trending</string>
+    <string name="or">or</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="your_pedido_is_empty">Su pedido esta vacio</string>
+    <string name="your_cart_is_empty">Su carrito esta vacio</string>
+
+    <string name="choose_your_payment_method">Choose Your Payment Method</string>
+    <string name="your_orders">Your Orders</string>
+    <string name="mapbox_access_token">REPLACE WITH YOUR OWN MAPBOX TOKEN</string>
+    <string name="write_a_review">Write a review</string>
+    <string name="review_hint">Write your thoughts about the restaurant</string>
+    <string name="search_restaurants">Search Restaurants</string>
+    <string name="title_activity_detalle_pedido">DetallePedidoActivity</string>
+    <string name="title_activity_domiciliario">Domiciliario</string>
+</resources>

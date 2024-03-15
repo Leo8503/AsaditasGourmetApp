@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/emptyCartImg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/empty_order" />
+
+        <TextView
+            android:id="@+id/emptyCartText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/emptyCartImg"
+            android:text="No tienes ordenes por entregar"
+            android:textSize="19sp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/open_sans_semibold"/>
+
+        <TextView
+            android:id="@+id/addItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emptyCartText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:visibility="gone"
+            android:fontFamily="@font/open_sans"
+            android:text="Agregue item para crear un pedido"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favoriteResRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:padding="3dp"/>
+    </RelativeLayout>
+</FrameLayout>

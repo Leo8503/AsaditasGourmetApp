@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical">
+
+	<com.flaviofaria.kenburnsview.KenBurnsView
+		android:id="@+id/imgLogin"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+
+	<View
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:background="#000000"
+		android:alpha="0"
+		android:id="@+id/fragmentloginView1"/>
+
+	<ImageView
+		android:id="@+id/fragmentloginLogo"
+		android:layout_width="fill_parent"
+		android:layout_height="150dp"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="95dp"
+		app:layout_heightPercent="20%"
+		tools:ignore="ContentDescription" />
+
+	<RelativeLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		app:layout_marginTopPercent="50%"
+		android:id="@+id/form_login"
+		android:padding="30dp"
+		android:alpha="0">
+
+		<ImageView
+			android:layout_height="@dimen/login_holder_height"
+			android:layout_width="@dimen/login_holder_height"
+			android:tint="#ffffff"
+			app:srcCompat="@drawable/user_icon"
+			android:id="@+id/mainImageView1"
+			android:layout_marginBottom="30dp"
+			tools:ignore="UseAppTint" />
+
+		<ImageView
+			android:layout_height="@dimen/login_holder_height"
+			android:layout_width="@dimen/login_holder_height"
+			android:layout_marginTop="20dp"
+			android:tint="#ffffff"
+			app:srcCompat="@drawable/password_icon"
+			android:layout_below="@id/mainImageView1"
+			android:id="@+id/mainImageView2"
+			tools:ignore="UseAppTint" />
+
+		<EditText
+			android:inputType="textEmailAddress"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/mainImageView1"
+			android:layout_marginLeft="20dp"
+			android:background="@null"
+			android:textSize="20sp"
+			android:textColorHint="#fff"
+			android:layout_alignTop="@id/mainImageView1"
+			android:layout_alignBottom="@id/mainImageView1"
+			android:textColor="#FFFFFF"
+			android:id="@+id/mainEditText1"
+			android:hint="Correo Electronico"
+			android:typeface="serif"/>
+
+		<View
+			android:layout_height="1dp"
+			android:layout_width="match_parent"
+			android:layout_below="@id/mainEditText1"
+			android:background="#FFFFFF"
+			android:layout_marginTop="@dimen/login_horizontalline_spacing"/>
+
+		<EditText
+			android:inputType="textPassword"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/mainImageView2"
+			android:layout_marginLeft="20dp"
+			android:background="@null"
+			android:textSize="20sp"
+			android:textColorHint="#ffffff"
+			android:layout_alignTop="@id/mainImageView2"
+			android:layout_alignBottom="@id/mainImageView2"
+			android:textColor="#FFFFFF"
+			android:id="@+id/mainEditText2"
+			android:hint="Contraseña"
+			android:typeface="serif"/>
+
+		<View
+			android:layout_height="1dp"
+			android:layout_width="match_parent"
+			android:layout_below="@id/mainEditText2"
+			android:background="#FFFFFF"
+			android:layout_marginTop="@dimen/login_horizontalline_spacing"/>
+
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_marginBottom="20dp"
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentBottom="true"
+		android:gravity="center"
+		android:id="@+id/label_signup"
+		android:alpha="0">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="#cccccc"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="No tienes una cuenta?"
+			android:typeface="serif"/>
+
+		<TextView
+			android:id="@+id/registrar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="Registrate"
+			android:textColor="#FFFFFF"
+			android:textStyle="bold"
+			android:layout_marginLeft="10dp"
+			android:typeface="serif"/>
+
+	</LinearLayout>
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

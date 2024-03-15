@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    android:layout_margin="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/resImage"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/restaurant_image_placeholder" />
+
+        <TextView
+            android:id="@+id/resName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resImage"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="11dp"
+            android:text="Barista,Sandwiches"
+            android:textSize="17sp"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/open_sans"/>
+
+        <TextView
+            android:id="@+id/resCuisine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resName"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Precio: 3200"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resCuisine"
+            android:layout_marginStart="11dp"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:numStars="5"
+            android:rating="4" />
+
+        <TextView
+            android:id="@+id/ratingAggregate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resCuisine"
+            android:layout_toEndOf="@+id/ratingBar"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:text="4.5"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:fontFamily="@font/open_sans"/>
+
+        <Button
+            android:id="@+id/average_price"
+            android:layout_width="fill_parent"
+            android:background="@color/colorPrimary"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ratingBar"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Agregar al Carrito"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

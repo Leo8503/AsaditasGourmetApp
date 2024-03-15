@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="28dp">
+
+    <ImageView
+        android:id="@+id/textLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/raleway_black"
+        android:padding="18dp"
+        android:src="@drawable/developer"/>
+
+    <TextView
+        android:id="@+id/textGetStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textLogo"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/open_sans_semibold"
+        android:paddingBottom="14dp"
+        android:text="Yummy Sushi"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/descLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textGetStarted"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/descLogin"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:paddingBottom="28dp"/>
+
+    <TextView
+        android:id="@+id/editMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descLogin"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/open_sans_light"
+        android:paddingBottom="1dp"
+        android:text="@string/descMobile"
+        android:textColor="@color/colorAccent" />
+
+    <RelativeLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editMobile">
+
+
+        <Spinner
+            android:id="@+id/countrySelector"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="0.3"
+            android:padding="5dp"
+            android:prompt="@string/country_selection_prompt"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            ></Spinner>
+
+        <EditText
+            android:id="@+id/loginInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/countrySelector"
+            android:fontFamily="@font/open_sans_semibold"
+            android:hint="Numero de Telefono"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/sendOtpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/loginContainer"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_btn_background"
+        android:fontFamily="@font/open_sans_semibold"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:text="Registrar"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/terms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/open_sans"/>
+
+</RelativeLayout>

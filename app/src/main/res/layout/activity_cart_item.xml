@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue_grey"
+    android:fitsSystemWindows="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context="fragments.CartItemFragment"
+            android:id="@+id/viewContainer"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue_grey">
+
+                <include
+                    android:id="@+id/cartItemToolBar"
+                    layout="@layout/cart_item_layout_toolbar" />
+
+                <RelativeLayout
+                    android:id="@+id/cartItemContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cartItemToolBar"
+                    android:background="@color/white"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/restaurantCartName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="Restaurant Name"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="17sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/cartItemRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/restaurantCartName"
+                        android:layout_marginTop="11dp"
+                        android:overScrollMode="never" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/cartItemContainer"
+                    android:background="@color/white"
+                    android:layout_marginTop="13dp"
+                    android:padding="12dp"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:id="@+id/editImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/extra_instructions"
+                        android:layout_weight="1"/>
+
+                    <EditText
+                        android:id="@+id/extraInstructionEdiText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:hint="Any cooking instructions?"
+                        android:fontFamily="@font/open_sans"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12dp"
+                        android:textColor="@color/gray"
+                        android:maxLines="2"
+                        android:layout_weight="4"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:elevation="30dp"
+            android:padding="17dp"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+
+            <TextView
+                android:id="@+id/deliveringAtText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Subtotal"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/userDeliveryAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deliveringAtText"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/open_sans"
+                android:text=""
+                android:textColor="@color/gray"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/changeAddressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="$ 0.00"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/envio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userDeliveryAddress"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Envio"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/valorEnvio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/changeAddressText"
+                android:layout_alignRight="@id/envio"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="$ 0.00"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/subtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/envio"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Total"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/valorSubtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valorEnvio"
+                android:layout_alignRight="@id/envio"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="$ 0.00"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+
+            <View
+                android:id="@+id/cartDivider"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@+id/subtotal"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="13dp"
+                android:background="@color/grey" />
+
+            <Button
+                android:id="@+id/payAmountBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cartDivider"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/pay_button_amt"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Confirmar"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

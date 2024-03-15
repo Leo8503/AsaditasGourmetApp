@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".AddCategoriaActivity">
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:numberpicker="http://schemas.android.com/tools"
+            numberpicker:ignore="MissingConstraints">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/detalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_margin="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/resImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/restaurant_image_placeholder" />
+
+                    <TextView
+                        android:id="@+id/resName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_below="@+id/resImage"
+                        android:textSize="17sp"
+                        android:text="Comida de rollo"
+                        android:textColor="@color/colorAccent"
+                        android:fontFamily="@font/open_sans"/>
+
+
+                    <TextView
+                        android:id="@+id/resCuisine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/resName"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Barista,Sandwiches"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/average_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/resCuisine"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/open_sans"
+                        android:text=""
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+                    <com.travijuu.numberpicker.library.NumberPicker
+                        android:id="@+id/number_picker"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/average_price"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginEnd="11dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@android:color/black"
+                        numberpicker:custom_layout="@layout/number_picker_custom_layout"
+                        numberpicker:focusable="false"
+                        numberpicker:max="10"
+                        numberpicker:min="0"
+                        numberpicker:unit="1"
+                        numberpicker:value="-5" />
+
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/number_picker"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginEnd="11dp"
+                        android:layout_marginBottom="11dp"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="top|start"
+                        android:inputType="textMultiLine"
+                        android:text=""
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+
+                    <Button
+                        android:id="@+id/add_cart"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/description"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginEnd="11dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Agregar al Carrito"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

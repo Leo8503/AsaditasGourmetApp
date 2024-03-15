@@ -1,0 +1,254 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_marginTop="65dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="70dp"
+        android:paddingTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <LinearLayout
+                android:id="@+id/layout_image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_flag"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imagenos"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre"
+                        android:textColor="#000" />
+
+                    <EditText
+                        android:id="@+id/Nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/input_border_bottom"
+                        android:backgroundTint="@color/light_gray"
+                        android:cursorVisible="true"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:padding="5dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/black_effective"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Apellido"
+                        android:textColor="#000" />
+
+                    <EditText
+                        android:id="@+id/Apellido"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/input_border_bottom"
+                        android:backgroundTint="@color/light_gray"
+                        android:cursorVisible="true"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:padding="5dp"
+                        android:paddingBottom="1dp"
+                        android:textColor="@color/black_effective"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@id/layout_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="Fecha de Nacimiento"
+                    android:textColor="#000" />
+
+               <EditText
+                    android:id="@+id/Fecha"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/input_border_bottom"
+                    android:backgroundTint="@color/light_gray"
+                    android:cursorVisible="true"
+                    android:padding="5dp"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black_effective"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Telefono"
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/Telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/input_border_bottom"
+                    android:cursorVisible="true"
+                    android:backgroundTint="@color/light_gray"
+                    android:padding="5dp"
+                    android:inputType="number"
+                    android:maxLength="50"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black_effective"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sexo"
+                    android:textColor="#000" />
+
+                 <Spinner
+                    android:id="@+id/Sexo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/light_gray"
+                    android:cursorVisible="true"
+                    android:padding="5dp"
+                    android:background="@color/light_gray"
+                    android:paddingBottom="10dp"
+                    android:entries="@array/sexo"
+                    android:textColor="@color/hint_enter_note"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Correo Electrónico"
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/Email"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/light_gray"
+                    android:layout_height="40dp"
+                    android:background="@drawable/input_border_bottom"
+                    android:cursorVisible="true"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:maxLength="50"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black_effective"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contraseña"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="true"
+                    android:background="@drawable/input_border_bottom"
+                    android:backgroundTint="@color/light_gray"
+                    android:inputType="textPassword"
+                    android:padding="5dp"
+                    android:paddingBottom="5dp"
+                    android:textColorHint="@color/tab_checked"
+                    android:textColor="@color/black_effective"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Repetir Contraseña"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/Recontrasema"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="true"
+                    android:background="@drawable/input_border_bottom"
+                    android:backgroundTint="@color/light_gray"
+                    android:inputType="textPassword"
+                    android:padding="5dp"
+                    android:paddingBottom="5dp"
+                    android:textColorHint="@color/tab_checked"
+                    android:textColor="@color/black_effective"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginBottom="30dp"
+                    android:letterSpacing="0.1"
+                    android:text="Ya tengo una cuenta"
+                    android:textColor="#000" />
+                <!--  android:onClick="registrar"-->
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btn_new_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="@color/white"
+        android:text="Registrar"
+        android:textSize="12dp" />
+
+</FrameLayout>
